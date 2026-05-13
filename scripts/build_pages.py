@@ -17,7 +17,7 @@ def fetch(url: str) -> str:
 
 
 def rewrite_home(html: str) -> str:
-    html = html.replace('/assets/tilda/', 'https://')
+    html = html.replace('/assets/tilda/', 'assets/tilda/')
     html = html.replace('href="/kit"', 'href="./kit/"')
     html = html.replace('href="/lisichka"', 'href="./lisichka/"')
     html = html.replace('href="/blog"', 'href="./blog/"')
@@ -30,7 +30,7 @@ def rewrite_home(html: str) -> str:
 
 
 def rewrite_inner(html: str, slug: str) -> str:
-    html = html.replace('/assets/tilda/', 'https://')
+    html = html.replace('/assets/tilda/', '../assets/tilda/')
     html = html.replace('href="/#portfolio"', 'href="../#portfolio"')
     html = html.replace('href="/#services"', 'href="../#services"')
     html = html.replace('href="/#blog"', 'href="../#blog"')
